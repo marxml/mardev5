@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Game BTTH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #4CAF50;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #388E3C;
+            margin-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label, input, button, a {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"], input[type="password"], button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .home-section {
+            padding: 20px;
+            background-color: #e8f5e9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-section h2 {
+            color: #388E3C;
+            margin-bottom: 15px;
+        }
+
+        .home-section p {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            background-color: #388E3C;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        ul li a:hover {
+            background-color: #2e7d32;
+        }
+
+        /* Hiding other sections until navigation */
+        #home, #game-links, #register {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Sign In Form -->
+    <div class="container" id="signin">
+        <!-- Tulisan Tempat Downloads BTTH -->
+        <div class="title">TEMPAT DOWNLOADS BTTH</div>
+        <h1>Sign In</h1>
+        <form onsubmit="showHome(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Sign In</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="showRegister()">Create Account</a></p>
+    </div>
+
+    <!-- Register Form -->
+    <div class="container" id="register">
+        <div class="title">TEMPAT DOWNLOADS BTTH</div>
+        <h1>Create Account</h1>
+        <form onsubmit="showHome(event)">
+            <label for="new-username">Username:</label>
+            <input type="text" id="new-username" name="new-username" required>
+            <label for="new-password">Password:</label>
+            <input type="password" id="new-password" name="new-password" required>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="showSignIn()">Sign In</a></p>
+    </div>
+
+    <!-- Halaman Home -->
+    <div class="container home-section" id="home">
+        <h2>Welcome to Download Game BTTH</h2>
+        <p>Please verify you are not a robot before proceeding:</p>
+        <form onsubmit="showGameLinks(event)">
+            <label for="robot-check">I am not a robot:</label>
+            <input type="checkbox" id="robot-check" required>
+            <button type="submit">Proceed</button>
+        </form>
+    </div>
+
+    <!-- Halaman Game Links -->
+    <div class="container home-section" id="game-links">
+        <h2>Game Links</h2>
+        <ul>
+            <li><a href="https://pc.277sy.com/?tgid=dc0026200&appid=#/gameinfo/gameid/12375" target="_blank">Download Game BTTH</a></li>
+            <li><a href="https://vt.tiktok.com/ZS2WMhB47/" target="_blank">Tutorial Login</a></li>
+            <li><a href="https://vt.tiktok.com/ZS2WMhB47/" target="_blank">Register VPN XBACK</a></li>
+        </ul>
+    </div>
+
+    <!-- Hak Cipta -->
+    <footer>
+        Copyright © MarrDev
+    </footer>
+
+    <script>
+        // Menampilkan halaman Home
+        function showHome(event) {
+            event.preventDefault();
+            document.getElementById('signin').style.display = 'none';
+            document.getElementById('register').style.display = 'none';
+            document.getElementById('home').style.display = 'block';
+        }
+
+        // Menampilkan halaman Register
+        function showRegister() {
+            document.getElementById('signin').style.display = 'none';
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('register').style.display = 'block';
+        }
+
+        // Menampilkan halaman Sign In dari Register
+        function showSignIn() {
+            document.getElementById('register').style.display = 'none';
+            document.getElementById('signin').style.display = 'block';
+        }
+
+        // Menampilkan halaman Game Links setelah verifikasi robot
+        function showGameLinks(event) {
+            event.preventDefault();
+            if (document.getElementById('robot-check').checked) {
+                document.getElementById('home').style.display = 'none';
+                document.getElementById('game-links').style.display = 'block';
+            } else {
+                alert('Please verify that you are not a robot.');
+            }
+        }
+    </script>
+</body>
+</html>
